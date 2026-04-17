@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>РКО для бизнеса — сравнение банков</title>
+  <meta name="description" content="Простая витрина банков с предложениями по открытию расчётного счёта для бизнеса." />
+  <style>
+    :root{
+      --bg:#111827;
+      --bg-2:#182234;
+      --surface:#ffffff;
+      --line:#dbe3ef;
+      --text:#142033;
+      --muted:#637288;
+      --button:#142238;
+      --button-hover:#0d1828;
+      --radius:26px;
+      --shadow:0 20px 55px rgba(6, 12, 22, .3);
+      --gap:20px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:"Lucida Sans", "Trebuchet MS", Arial, sans-serif;
+      color:#edf3fb;
+      background:linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    }
+
+    .container{
+      width:min(1140px, calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .hero{
+      padding:42px 0 20px;
+    }
+
+    .hero-box{
+      border-radius:34px;
+      padding:36px 36px 32px;
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.11);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
+    }
+
+    h1{
+      margin:18px 0 12px;
+      font-size:clamp(34px, 5vw, 58px);
+      line-height:.96;
+      letter-spacing:-.05em;
+      max-width:760px;
+    }
+
+    .hero-copy{
+      margin:0;
+      max-width:620px;
+      color:#bac8da;
+      font-size:17px;
+      line-height:1.55;
+    }
+
+    .section-head{
+      padding:26px 2px 16px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:clamp(26px, 4vw, 40px);
+      letter-spacing:-.04em;
+    }
+
+    .offers{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:var(--gap);
+      padding-bottom:44px;
+    }
+
+    .offer{
+      min-height:350px;
+      display:flex;
+      flex-direction:column;
+      background:var(--surface);
+      border:1px solid rgba(219,227,239,.92);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      color:var(--text);
+    }
+
+    .offer:nth-child(3){
+      grid-column:1 / -1;
+      width:calc((100% - var(--gap)) / 2);
+      justify-self:center;
+    }
+
+    .logo-area{
+      min-height:168px;
+      padding:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg, #eef3fa 0%, #e7edf7 100%);
+      border-bottom:1px solid var(--line);
+    }
+
+    .logo-frame{
+      width:230px;
+      height:92px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .logo-frame img{
+      display:block;
+      width:auto;
+      height:auto;
+      max-width:86%;
+      max-height:70%;
+      object-fit:contain;
+    }
+
+    .logo-frame img.logo-otp{max-width:92%; max-height:60%;}
+    .logo-frame img.logo-mts{max-width:86%; max-height:60%;}
+    .logo-frame img.logo-psb{max-width:126%; max-height:100%;}
+
+    .content{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      padding:24px;
+      gap:12px;
+    }
+
+    .title{
+      margin:0;
+      font-size:30px;
+      line-height:1.04;
+      letter-spacing:-.04em;
+    }
+
+    .description{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.55;
+    }
+
+    .cta{
+      margin-top:auto;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:50px;
+      border-radius:14px;
+      background:var(--button);
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      transition:background .15s ease, transform .15s ease;
+    }
+
+    .cta:hover{
+      background:var(--button-hover);
+      transform:translateY(-1px);
+    }
+
+    footer{
+      padding:4px 0 30px;
+    }
+
+    .footer-note{
+      margin:0;
+      color:#9eaec3;
+      text-align:right;
+      font-size:13px;
+    }
+
+    @media (max-width: 980px){
+      .offers{grid-template-columns:1fr;}
+      .offer,
+      .offer:nth-child(3){
+        width:100%;
+        min-height:332px;
+        grid-column:auto;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hero-box{padding:28px 22px 26px;}
+      .content{padding:22px 20px;}
+      .title{font-size:28px;}
+      .logo-area{min-height:156px;}
+      .logo-frame{width:210px; height:82px;}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-box">
+        <h1>Подберите расчётный счёт под ваш формат работы</h1>
+        <p class="hero-copy">Минималистичная подборка банков для бизнеса: коротко, понятно и без лишней перегрузки.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="section-head">
+      <h2>Банки в подборке</h2>
+    </div>
+
+    <section class="offers">
+      <article class="offer">
+        <div class="logo-area">
+          <div class="logo-frame">
+            <img class="logo-otp" src="assets/otp.png" alt="ОТП Банк" />
+          </div>
+        </div>
+        <div class="content">
+          <h3 class="title">ОТП Банк</h3>
+          <p class="description">Базовый вариант для малого бизнеса и повседневных операций.</p>
+          <a class="cta" href="">Открыть счёт</a>
+        </div>
+      </article>
+
+      <article class="offer">
+        <div class="logo-area">
+          <div class="logo-frame">
+            <img class="logo-mts" src="assets/mts-clean.png" alt="МТС Банк" />
+          </div>
+        </div>
+        <div class="content">
+          <h3 class="title">МТС Банк</h3>
+          <p class="description">Для тех, кто делает ставку на быстрый digital-формат работы.</p>
+          <a class="cta" href="">Открыть счёт</a>
+        </div>
+      </article>
+
+      <article class="offer">
+        <div class="logo-area">
+          <div class="logo-frame">
+            <img class="logo-psb" src="assets/psb.png" alt="ПСБ" />
+          </div>
+        </div>
+        <div class="content">
+          <h3 class="title">ПСБ</h3>
+          <p class="description">Более фундаментальный вариант для действующего бизнеса.</p>
+          <a class="cta" href="">Открыть счёт</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p class="footer-note">Сведения на странице носят ознакомительный характер.</p>
+  </footer>
+</body>
+</html>
